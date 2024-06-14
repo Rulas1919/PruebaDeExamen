@@ -7,17 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C44D45DF2C1C07F900370B8F /* PuebaPlantillaViewUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44D45D72C1C07F900370B8F /* PuebaPlantillaViewUI.swift */; };
+		C44D45E02C1C07F900370B8F /* PuebaPlantillaPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44D45D82C1C07F900370B8F /* PuebaPlantillaPresenter.swift */; };
+		C44D45E12C1C07F900370B8F /* PuebaPlantillaRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44D45D92C1C07F900370B8F /* PuebaPlantillaRouter.swift */; };
+		C44D45E22C1C07F900370B8F /* PuebaPlantillaProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44D45DA2C1C07F900370B8F /* PuebaPlantillaProtocols.swift */; };
+		C44D45E32C1C07F900370B8F /* PuebaPlantillaMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44D45DB2C1C07F900370B8F /* PuebaPlantillaMain.swift */; };
+		C44D45E42C1C07F900370B8F /* PuebaPlantillaInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44D45DC2C1C07F900370B8F /* PuebaPlantillaInteractor.swift */; };
+		C44D45E52C1C07F900370B8F /* PuebaPlantillaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44D45DD2C1C07F900370B8F /* PuebaPlantillaView.swift */; };
+		C44D45E62C1C07F900370B8F /* PuebaPlantillaEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44D45DE2C1C07F900370B8F /* PuebaPlantillaEntity.swift */; };
 		C4BE5A8B2C1AD59C002A3E55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BE5A8A2C1AD59C002A3E55 /* AppDelegate.swift */; };
-		C4BE5A8D2C1AD59C002A3E55 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BE5A8C2C1AD59C002A3E55 /* SceneDelegate.swift */; };
 		C4BE5A8F2C1AD59C002A3E55 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BE5A8E2C1AD59C002A3E55 /* ViewController.swift */; };
 		C4BE5A942C1AD59E002A3E55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4BE5A932C1AD59E002A3E55 /* Assets.xcassets */; };
 		C4BE5A972C1AD59E002A3E55 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = C4BE5A962C1AD59E002A3E55 /* Base */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C44D45D72C1C07F900370B8F /* PuebaPlantillaViewUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuebaPlantillaViewUI.swift; sourceTree = "<group>"; };
+		C44D45D82C1C07F900370B8F /* PuebaPlantillaPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuebaPlantillaPresenter.swift; sourceTree = "<group>"; };
+		C44D45D92C1C07F900370B8F /* PuebaPlantillaRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuebaPlantillaRouter.swift; sourceTree = "<group>"; };
+		C44D45DA2C1C07F900370B8F /* PuebaPlantillaProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuebaPlantillaProtocols.swift; sourceTree = "<group>"; };
+		C44D45DB2C1C07F900370B8F /* PuebaPlantillaMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuebaPlantillaMain.swift; sourceTree = "<group>"; };
+		C44D45DC2C1C07F900370B8F /* PuebaPlantillaInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuebaPlantillaInteractor.swift; sourceTree = "<group>"; };
+		C44D45DD2C1C07F900370B8F /* PuebaPlantillaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuebaPlantillaView.swift; sourceTree = "<group>"; };
+		C44D45DE2C1C07F900370B8F /* PuebaPlantillaEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuebaPlantillaEntity.swift; sourceTree = "<group>"; };
 		C4BE5A872C1AD59C002A3E55 /* PruebaExamen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PruebaExamen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4BE5A8A2C1AD59C002A3E55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C4BE5A8C2C1AD59C002A3E55 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C4BE5A8E2C1AD59C002A3E55 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C4BE5A932C1AD59E002A3E55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4BE5A962C1AD59E002A3E55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,7 +69,6 @@
 			isa = PBXGroup;
 			children = (
 				C4BE5A8A2C1AD59C002A3E55 /* AppDelegate.swift */,
-				C4BE5A8C2C1AD59C002A3E55 /* SceneDelegate.swift */,
 				C4BE5A8E2C1AD59C002A3E55 /* ViewController.swift */,
 				C4BE5A9E2C1AD5D8002A3E55 /* Plantilla */,
 				C4BE5A932C1AD59E002A3E55 /* Assets.xcassets */,
@@ -68,6 +81,14 @@
 		C4BE5A9E2C1AD5D8002A3E55 /* Plantilla */ = {
 			isa = PBXGroup;
 			children = (
+				C44D45D72C1C07F900370B8F /* PuebaPlantillaViewUI.swift */,
+				C44D45D82C1C07F900370B8F /* PuebaPlantillaPresenter.swift */,
+				C44D45D92C1C07F900370B8F /* PuebaPlantillaRouter.swift */,
+				C44D45DA2C1C07F900370B8F /* PuebaPlantillaProtocols.swift */,
+				C44D45DB2C1C07F900370B8F /* PuebaPlantillaMain.swift */,
+				C44D45DC2C1C07F900370B8F /* PuebaPlantillaInteractor.swift */,
+				C44D45DD2C1C07F900370B8F /* PuebaPlantillaView.swift */,
+				C44D45DE2C1C07F900370B8F /* PuebaPlantillaEntity.swift */,
 			);
 			path = Plantilla;
 			sourceTree = "<group>";
@@ -143,8 +164,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4BE5A8F2C1AD59C002A3E55 /* ViewController.swift in Sources */,
+				C44D45DF2C1C07F900370B8F /* PuebaPlantillaViewUI.swift in Sources */,
+				C44D45E02C1C07F900370B8F /* PuebaPlantillaPresenter.swift in Sources */,
+				C44D45E12C1C07F900370B8F /* PuebaPlantillaRouter.swift in Sources */,
+				C44D45E22C1C07F900370B8F /* PuebaPlantillaProtocols.swift in Sources */,
+				C44D45E32C1C07F900370B8F /* PuebaPlantillaMain.swift in Sources */,
+				C44D45E42C1C07F900370B8F /* PuebaPlantillaInteractor.swift in Sources */,
+				C44D45E52C1C07F900370B8F /* PuebaPlantillaView.swift in Sources */,
+				C44D45E62C1C07F900370B8F /* PuebaPlantillaEntity.swift in Sources */,
 				C4BE5A8B2C1AD59C002A3E55 /* AppDelegate.swift in Sources */,
-				C4BE5A8D2C1AD59C002A3E55 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
