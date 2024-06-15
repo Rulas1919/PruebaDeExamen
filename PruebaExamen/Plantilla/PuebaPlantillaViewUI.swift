@@ -10,12 +10,13 @@ import Foundation
 import UIKit
 
 protocol PuebaPlantillaViewUIDelegate {
-   
+ 
 }
 
 class PuebaPlantillaViewUI: UIView{
     var delegate: PuebaPlantillaViewUIDelegate?
     var navigationController: UINavigationController?
+    
     
     lazy var stackView: UIStackView = {
         let stackView = UIStackView()
@@ -68,6 +69,24 @@ class PuebaPlantillaViewUI: UIView{
         return cellphone
     }()
     
+    lazy var submitButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Enviar", for: .normal)
+        button.backgroundColor = .systemBlue
+        button.layer.cornerRadius = 5
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
+    lazy var imagevView: UIImageView = {
+        let image = UIImageView()
+        image.image = UIImage(named: "los-pollos-hermanos")
+        image.contentMode = .scaleAspectFill
+        image.translatesAutoresizingMaskIntoConstraints = false
+        return image
+        
+    }()
+    
     public convenience init(
         navigation: UINavigationController,
         delegate: PuebaPlantillaViewUIDelegate){
@@ -77,6 +96,17 @@ class PuebaPlantillaViewUI: UIView{
             
         setUI()
         setConstrains()
+            
+            func HideKeyBoard(){
+                let tap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(DismissKeyboard))
+                self.addGestureRecognizer(tap)
+            }
+            
+            
+    }
+
+    @objc func DismissKeyboard(){
+        self.endEditing(true)
     }
 
     override init(frame: CGRect) {
@@ -91,19 +121,27 @@ class PuebaPlantillaViewUI: UIView{
     
     func setUI(){
         self.backgroundColor = .white
+        self.addSubview(imagevView)
         stackView.addArrangedSubview(firstNameTextField)
         stackView.addArrangedSubview(lastNameTextField)
         stackView.addArrangedSubview(middleNameTextField)
         stackView.addArrangedSubview(emailTextField)
         stackView.addArrangedSubview(cellPhoneTextField)
+        stackView.addArrangedSubview(submitButton)
         self.addSubview(stackView)
+    
 
     }
 
     func setConstrains(){
         NSLayoutConstraint.activate([
             
-            stackView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 20),
+            imagevView.topAnchor.constraint(equalTo: self.layoutMarginsGuide.topAnchor),
+            imagevView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            imagevView.widthAnchor.constraint(equalToConstant: 200),
+            imagevView.heightAnchor.constraint(equalToConstant: 200),
+            
+            stackView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 230),
             stackView.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 20),
             stackView.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -20),
             stackView.bottomAnchor.constraint(lessThanOrEqualTo: self.safeAreaLayoutGuide.bottomAnchor, constant: -20)
