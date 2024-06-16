@@ -13,10 +13,17 @@ protocol PuebaPlantillaViewUIDelegate {
  
 }
 
-class PuebaPlantillaViewUI: UIView{
+class PuebaPlantillaViewUI: UIView, UITextFieldDelegate{
     var delegate: PuebaPlantillaViewUIDelegate?
     var navigationController: UINavigationController?
     
+    private lazy var scrollView: UIScrollView = {
+        let view = UIScrollView()
+        view.backgroundColor = UIColor.clear
+        view.showsHorizontalScrollIndicator = false
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
     
     lazy var stackView: UIStackView = {
         let stackView = UIStackView()
@@ -65,6 +72,7 @@ class PuebaPlantillaViewUI: UIView{
         cellphone.borderStyle = .roundedRect
         cellphone.placeholder = "Teléfono Celular"
         cellphone.keyboardType = .numberPad
+        cellphone.delegate = self
         cellphone.translatesAutoresizingMaskIntoConstraints = false
         return cellphone
     }()
@@ -94,13 +102,11 @@ class PuebaPlantillaViewUI: UIView{
         self.delegate = delegate
         self.navigationController = navigation
             
+            let gestoTap = UITapGestureRecognizer(target: self, action: #selector(dissmisKeyboard(_:)))
+            self.addGestureRecognizer(gestoTap)
+            
         setUI()
         setConstrains()
-            
-            func HideKeyBoard(){
-                let tap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(DismissKeyboard))
-                self.addGestureRecognizer(tap)
-            }
             
             
     }
@@ -121,14 +127,16 @@ class PuebaPlantillaViewUI: UIView{
     
     func setUI(){
         self.backgroundColor = .white
-        self.addSubview(imagevView)
+        self.addSubview(scrollView)
+        scrollView.addSubview(imagevView)
+        scrollView.addSubview(stackView)
         stackView.addArrangedSubview(firstNameTextField)
         stackView.addArrangedSubview(lastNameTextField)
         stackView.addArrangedSubview(middleNameTextField)
         stackView.addArrangedSubview(emailTextField)
         stackView.addArrangedSubview(cellPhoneTextField)
         stackView.addArrangedSubview(submitButton)
-        self.addSubview(stackView)
+        
     
 
     }
@@ -136,7 +144,12 @@ class PuebaPlantillaViewUI: UIView{
     func setConstrains(){
         NSLayoutConstraint.activate([
             
-            imagevView.topAnchor.constraint(equalTo: self.layoutMarginsGuide.topAnchor),
+            scrollView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
+            scrollView.leftAnchor.constraint(equalTo: self.leftAnchor),
+            scrollView.rightAnchor.constraint(equalTo: self.rightAnchor),
+            scrollView.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor),
+            
+            imagevView.topAnchor.constraint(equalTo: scrollView.layoutMarginsGuide.topAnchor),
             imagevView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             imagevView.widthAnchor.constraint(equalToConstant: 200),
             imagevView.heightAnchor.constraint(equalToConstant: 200),
@@ -144,12 +157,32 @@ class PuebaPlantillaViewUI: UIView{
             stackView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 230),
             stackView.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 20),
             stackView.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -20),
-            stackView.bottomAnchor.constraint(lessThanOrEqualTo: self.safeAreaLayoutGuide.bottomAnchor, constant: -20)
-        
-        
+            stackView.bottomAnchor.constraint(lessThanOrEqualTo: scrollView.safeAreaLayoutGuide.bottomAnchor, constant: -20),
+            
+            
         ])
     }
+    
+    @objc func dissmisKeyboard(_ sender: UITapGestureRecognizer){
+        self.endEditing(true)
+    }
 
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+    
+            if textField == cellPhoneTextField {
+                guard let currentText = textField.text,
+                      let range = Range(range, in: currentText) else {
+                    return false
+                }
+
+                let newText = currentText.replacingCharacters(in: range, with: string)
+
+                return newText.count <= 10
+            }
+
+            return true
+    }
+    
 }
 
 
