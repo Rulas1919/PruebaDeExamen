@@ -12,11 +12,11 @@ protocol PuebaPlantillaViewProtocol: class {
 }
 
 protocol PuebaPlantillaInteractorProtocol: class {
-    
+    func saveDataUser(firstName: String, lastName: String, middleName: String, email: String, phone: String)
 }
 
 protocol PuebaPlantillaPresenterProtocol: class {
-    
+    func saveDataUser(firstName: String, lastName: String, middleName: String, email: String, phone: String)
 }
 
 protocol PuebaPlantillaRouterProtocol: class {

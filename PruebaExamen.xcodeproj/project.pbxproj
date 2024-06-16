@@ -15,6 +15,14 @@
 		C44D45E42C1C07F900370B8F /* PuebaPlantillaInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44D45DC2C1C07F900370B8F /* PuebaPlantillaInteractor.swift */; };
 		C44D45E52C1C07F900370B8F /* PuebaPlantillaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44D45DD2C1C07F900370B8F /* PuebaPlantillaView.swift */; };
 		C44D45E62C1C07F900370B8F /* PuebaPlantillaEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44D45DE2C1C07F900370B8F /* PuebaPlantillaEntity.swift */; };
+		C44D45F12C1F7CEE00370B8F /* SavedDataViewViewUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44D45E92C1F7CEE00370B8F /* SavedDataViewViewUI.swift */; };
+		C44D45F22C1F7CEE00370B8F /* SavedDataViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44D45EA2C1F7CEE00370B8F /* SavedDataViewPresenter.swift */; };
+		C44D45F32C1F7CEE00370B8F /* SavedDataViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44D45EB2C1F7CEE00370B8F /* SavedDataViewRouter.swift */; };
+		C44D45F42C1F7CEE00370B8F /* SavedDataViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44D45EC2C1F7CEE00370B8F /* SavedDataViewProtocols.swift */; };
+		C44D45F52C1F7CEE00370B8F /* SavedDataViewMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44D45ED2C1F7CEE00370B8F /* SavedDataViewMain.swift */; };
+		C44D45F62C1F7CEE00370B8F /* SavedDataViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44D45EE2C1F7CEE00370B8F /* SavedDataViewInteractor.swift */; };
+		C44D45F72C1F7CEE00370B8F /* SavedDataViewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44D45EF2C1F7CEE00370B8F /* SavedDataViewView.swift */; };
+		C44D45F82C1F7CEE00370B8F /* SavedDataViewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44D45F02C1F7CEE00370B8F /* SavedDataViewEntity.swift */; };
 		C4BE5A8B2C1AD59C002A3E55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BE5A8A2C1AD59C002A3E55 /* AppDelegate.swift */; };
 		C4BE5A8F2C1AD59C002A3E55 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BE5A8E2C1AD59C002A3E55 /* ViewController.swift */; };
 		C4BE5A942C1AD59E002A3E55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4BE5A932C1AD59E002A3E55 /* Assets.xcassets */; };
@@ -30,6 +38,14 @@
 		C44D45DC2C1C07F900370B8F /* PuebaPlantillaInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuebaPlantillaInteractor.swift; sourceTree = "<group>"; };
 		C44D45DD2C1C07F900370B8F /* PuebaPlantillaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuebaPlantillaView.swift; sourceTree = "<group>"; };
 		C44D45DE2C1C07F900370B8F /* PuebaPlantillaEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuebaPlantillaEntity.swift; sourceTree = "<group>"; };
+		C44D45E92C1F7CEE00370B8F /* SavedDataViewViewUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedDataViewViewUI.swift; sourceTree = "<group>"; };
+		C44D45EA2C1F7CEE00370B8F /* SavedDataViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedDataViewPresenter.swift; sourceTree = "<group>"; };
+		C44D45EB2C1F7CEE00370B8F /* SavedDataViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedDataViewRouter.swift; sourceTree = "<group>"; };
+		C44D45EC2C1F7CEE00370B8F /* SavedDataViewProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedDataViewProtocols.swift; sourceTree = "<group>"; };
+		C44D45ED2C1F7CEE00370B8F /* SavedDataViewMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedDataViewMain.swift; sourceTree = "<group>"; };
+		C44D45EE2C1F7CEE00370B8F /* SavedDataViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedDataViewInteractor.swift; sourceTree = "<group>"; };
+		C44D45EF2C1F7CEE00370B8F /* SavedDataViewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedDataViewView.swift; sourceTree = "<group>"; };
+		C44D45F02C1F7CEE00370B8F /* SavedDataViewEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedDataViewEntity.swift; sourceTree = "<group>"; };
 		C4BE5A872C1AD59C002A3E55 /* PruebaExamen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PruebaExamen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4BE5A8A2C1AD59C002A3E55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4BE5A8E2C1AD59C002A3E55 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +65,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C44D45E82C1F7C9F00370B8F /* SavedData */ = {
+			isa = PBXGroup;
+			children = (
+				C44D45E92C1F7CEE00370B8F /* SavedDataViewViewUI.swift */,
+				C44D45EA2C1F7CEE00370B8F /* SavedDataViewPresenter.swift */,
+				C44D45EB2C1F7CEE00370B8F /* SavedDataViewRouter.swift */,
+				C44D45EC2C1F7CEE00370B8F /* SavedDataViewProtocols.swift */,
+				C44D45ED2C1F7CEE00370B8F /* SavedDataViewMain.swift */,
+				C44D45EE2C1F7CEE00370B8F /* SavedDataViewInteractor.swift */,
+				C44D45EF2C1F7CEE00370B8F /* SavedDataViewView.swift */,
+				C44D45F02C1F7CEE00370B8F /* SavedDataViewEntity.swift */,
+			);
+			path = SavedData;
+			sourceTree = "<group>";
+		};
 		C4BE5A7E2C1AD59C002A3E55 = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +102,7 @@
 				C4BE5A8A2C1AD59C002A3E55 /* AppDelegate.swift */,
 				C4BE5A8E2C1AD59C002A3E55 /* ViewController.swift */,
 				C4BE5A9E2C1AD5D8002A3E55 /* Plantilla */,
+				C44D45E82C1F7C9F00370B8F /* SavedData */,
 				C4BE5A932C1AD59E002A3E55 /* Assets.xcassets */,
 				C4BE5A952C1AD59E002A3E55 /* LaunchScreen.storyboard */,
 				C4BE5A982C1AD59E002A3E55 /* Info.plist */,
@@ -173,6 +205,14 @@
 				C44D45E52C1C07F900370B8F /* PuebaPlantillaView.swift in Sources */,
 				C44D45E62C1C07F900370B8F /* PuebaPlantillaEntity.swift in Sources */,
 				C4BE5A8B2C1AD59C002A3E55 /* AppDelegate.swift in Sources */,
+				C44D45F12C1F7CEE00370B8F /* SavedDataViewViewUI.swift in Sources */,
+				C44D45F22C1F7CEE00370B8F /* SavedDataViewPresenter.swift in Sources */,
+				C44D45F32C1F7CEE00370B8F /* SavedDataViewRouter.swift in Sources */,
+				C44D45F42C1F7CEE00370B8F /* SavedDataViewProtocols.swift in Sources */,
+				C44D45F52C1F7CEE00370B8F /* SavedDataViewMain.swift in Sources */,
+				C44D45F62C1F7CEE00370B8F /* SavedDataViewInteractor.swift in Sources */,
+				C44D45F72C1F7CEE00370B8F /* SavedDataViewView.swift in Sources */,
+				C44D45F82C1F7CEE00370B8F /* SavedDataViewEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,8 +361,7 @@
 				INFOPLIST_FILE = PruebaExamen/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -348,8 +387,7 @@
 				INFOPLIST_FILE = PruebaExamen/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

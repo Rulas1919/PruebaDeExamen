@@ -10,20 +10,12 @@ import Foundation
 import UIKit
 
 protocol PuebaPlantillaViewUIDelegate {
- 
+    func submitForm(firstName: String, lastName: String, middleName: String, email: String, phone: String)
 }
 
 class PuebaPlantillaViewUI: UIView, UITextFieldDelegate{
     var delegate: PuebaPlantillaViewUIDelegate?
     var navigationController: UINavigationController?
-    
-    private lazy var scrollView: UIScrollView = {
-        let view = UIScrollView()
-        view.backgroundColor = UIColor.clear
-        view.showsHorizontalScrollIndicator = false
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
     
     lazy var stackView: UIStackView = {
         let stackView = UIStackView()
@@ -82,8 +74,21 @@ class PuebaPlantillaViewUI: UIView, UITextFieldDelegate{
         button.setTitle("Enviar", for: .normal)
         button.backgroundColor = .systemBlue
         button.layer.cornerRadius = 5
+        button.addTarget(self, action: #selector(submitForm), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
+    }()
+    
+    lazy var savedData: UIButton = {
+        var configuration = UIButton.Configuration.bordered()
+        configuration.title = "Registros de Informacion"
+        let button = UIButton(type: .system, primaryAction: UIAction(handler: { _ in self.startNavigation()}))
+        button.configuration = configuration
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+        
+        
+        
     }()
     
     lazy var imagevView: UIImageView = {
@@ -94,7 +99,7 @@ class PuebaPlantillaViewUI: UIView, UITextFieldDelegate{
         return image
         
     }()
-    
+
     public convenience init(
         navigation: UINavigationController,
         delegate: PuebaPlantillaViewUIDelegate){
@@ -111,6 +116,16 @@ class PuebaPlantillaViewUI: UIView, UITextFieldDelegate{
             
     }
 
+    @objc func submitForm() {
+        let firstName = firstNameTextField.text ?? ""
+        let lastName = lastNameTextField.text ?? ""
+        let middleName = middleNameTextField.text ?? ""
+        let email = emailTextField.text ?? ""
+        let phone = cellPhoneTextField.text ?? ""
+
+        delegate?.submitForm(firstName: firstName, lastName: lastName, middleName: middleName, email: email, phone: phone)
+    }
+    
     @objc func DismissKeyboard(){
         self.endEditing(true)
     }
@@ -127,15 +142,15 @@ class PuebaPlantillaViewUI: UIView, UITextFieldDelegate{
     
     func setUI(){
         self.backgroundColor = .white
-        self.addSubview(scrollView)
-        scrollView.addSubview(imagevView)
-        scrollView.addSubview(stackView)
+        self.addSubview(imagevView)
+        self.addSubview(stackView)
         stackView.addArrangedSubview(firstNameTextField)
         stackView.addArrangedSubview(lastNameTextField)
         stackView.addArrangedSubview(middleNameTextField)
         stackView.addArrangedSubview(emailTextField)
         stackView.addArrangedSubview(cellPhoneTextField)
         stackView.addArrangedSubview(submitButton)
+        stackView.addArrangedSubview(savedData)
         
     
 
@@ -144,12 +159,8 @@ class PuebaPlantillaViewUI: UIView, UITextFieldDelegate{
     func setConstrains(){
         NSLayoutConstraint.activate([
             
-            scrollView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
-            scrollView.leftAnchor.constraint(equalTo: self.leftAnchor),
-            scrollView.rightAnchor.constraint(equalTo: self.rightAnchor),
-            scrollView.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor),
             
-            imagevView.topAnchor.constraint(equalTo: scrollView.layoutMarginsGuide.topAnchor),
+            imagevView.topAnchor.constraint(equalTo: self.layoutMarginsGuide.topAnchor),
             imagevView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             imagevView.widthAnchor.constraint(equalToConstant: 200),
             imagevView.heightAnchor.constraint(equalToConstant: 200),
@@ -157,10 +168,16 @@ class PuebaPlantillaViewUI: UIView, UITextFieldDelegate{
             stackView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 230),
             stackView.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 20),
             stackView.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -20),
-            stackView.bottomAnchor.constraint(lessThanOrEqualTo: scrollView.safeAreaLayoutGuide.bottomAnchor, constant: -20),
+            stackView.bottomAnchor.constraint(lessThanOrEqualTo: self.safeAreaLayoutGuide.bottomAnchor, constant: -20),
             
             
+            
+
         ])
+    }
+    
+    func startNavigation(){
+        print("tapped!")
     }
     
     @objc func dissmisKeyboard(_ sender: UITapGestureRecognizer){

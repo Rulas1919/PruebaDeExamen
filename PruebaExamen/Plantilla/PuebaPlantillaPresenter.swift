@@ -17,5 +17,9 @@ class PuebaPlantillaPresenter {
 
 
 extension PuebaPlantillaPresenter: PuebaPlantillaPresenterProtocol {
+    func saveDataUser(firstName: String, lastName: String, middleName: String, email: String, phone: String) {
+        interactor?.saveDataUser(firstName: firstName, lastName: lastName, middleName: middleName, email: email, phone: phone)
+    }
+    
     
 }
