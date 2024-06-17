@@ -23,6 +23,7 @@
 		C44D45F62C1F7CEE00370B8F /* SavedDataViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44D45EE2C1F7CEE00370B8F /* SavedDataViewInteractor.swift */; };
 		C44D45F72C1F7CEE00370B8F /* SavedDataViewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44D45EF2C1F7CEE00370B8F /* SavedDataViewView.swift */; };
 		C44D45F82C1F7CEE00370B8F /* SavedDataViewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44D45F02C1F7CEE00370B8F /* SavedDataViewEntity.swift */; };
+		C44D45FA2C1FCC3100370B8F /* SavedDataTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44D45F92C1FCC3100370B8F /* SavedDataTableView.swift */; };
 		C4BE5A8B2C1AD59C002A3E55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BE5A8A2C1AD59C002A3E55 /* AppDelegate.swift */; };
 		C4BE5A8F2C1AD59C002A3E55 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BE5A8E2C1AD59C002A3E55 /* ViewController.swift */; };
 		C4BE5A942C1AD59E002A3E55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4BE5A932C1AD59E002A3E55 /* Assets.xcassets */; };
@@ -46,6 +47,7 @@
 		C44D45EE2C1F7CEE00370B8F /* SavedDataViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedDataViewInteractor.swift; sourceTree = "<group>"; };
 		C44D45EF2C1F7CEE00370B8F /* SavedDataViewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedDataViewView.swift; sourceTree = "<group>"; };
 		C44D45F02C1F7CEE00370B8F /* SavedDataViewEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedDataViewEntity.swift; sourceTree = "<group>"; };
+		C44D45F92C1FCC3100370B8F /* SavedDataTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedDataTableView.swift; sourceTree = "<group>"; };
 		C4BE5A872C1AD59C002A3E55 /* PruebaExamen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PruebaExamen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4BE5A8A2C1AD59C002A3E55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4BE5A8E2C1AD59C002A3E55 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				C44D45EE2C1F7CEE00370B8F /* SavedDataViewInteractor.swift */,
 				C44D45EF2C1F7CEE00370B8F /* SavedDataViewView.swift */,
 				C44D45F02C1F7CEE00370B8F /* SavedDataViewEntity.swift */,
+				C44D45F92C1FCC3100370B8F /* SavedDataTableView.swift */,
 			);
 			path = SavedData;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 			files = (
 				C4BE5A8F2C1AD59C002A3E55 /* ViewController.swift in Sources */,
 				C44D45DF2C1C07F900370B8F /* PuebaPlantillaViewUI.swift in Sources */,
+				C44D45FA2C1FCC3100370B8F /* SavedDataTableView.swift in Sources */,
 				C44D45E02C1C07F900370B8F /* PuebaPlantillaPresenter.swift in Sources */,
 				C44D45E12C1C07F900370B8F /* PuebaPlantillaRouter.swift in Sources */,
 				C44D45E22C1C07F900370B8F /* PuebaPlantillaProtocols.swift in Sources */,
