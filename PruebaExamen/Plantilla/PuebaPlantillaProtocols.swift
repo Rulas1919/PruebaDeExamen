@@ -8,7 +8,7 @@
 
 import Foundation
 protocol PuebaPlantillaViewProtocol: class {
-    
+    func formSavedSuccessfully()
 }
 
 protocol PuebaPlantillaInteractorProtocol: class {
@@ -17,7 +17,9 @@ protocol PuebaPlantillaInteractorProtocol: class {
 
 protocol PuebaPlantillaPresenterProtocol: class {
     func saveDataUser(firstName: String, lastName: String, middleName: String, email: String, phone: String)
+    func formSavedSuccessfully()
 }
+
 
 protocol PuebaPlantillaRouterProtocol: class {
     

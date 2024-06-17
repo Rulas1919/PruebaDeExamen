@@ -37,9 +37,19 @@ class PuebaPlantillaView: UIViewController {
 }
 
 extension PuebaPlantillaView: PuebaPlantillaViewProtocol {
+    func formSavedSuccessfully() {
+        ui?.firstNameTextField.text = ""
+        ui?.lastNameTextField.text = ""
+        ui?.middleNameTextField.text = ""
+        ui?.emailTextField.text = ""
+        ui?.cellPhoneTextField.text = ""
+        showSuccessMessage()
+    }
+    
+    
     
     func submitForm(firstName: String, lastName: String, middleName: String, email: String, phone: String) {
-        guard firstName.isEmpty || lastName.isEmpty || middleName.isEmpty || email.isEmpty || phone.isEmpty else {
+        guard firstName != "" && lastName != "" && middleName != "" && email != "" && phone != "" else {
            showErrorMessage("Todos los campos son obligatorios.")
             return
         }
@@ -72,6 +82,11 @@ extension PuebaPlantillaView: PuebaPlantillaViewProtocol {
 
 
 extension PuebaPlantillaView: PuebaPlantillaViewUIDelegate {
+    func goToViewTable() {
+        let x = SavedDataViewMain.createModule(navigation: self.navigationController!)
+        navigationController?.pushViewController(x, animated: true)
+    }
+    
    
     
     }

@@ -11,6 +11,7 @@ import UIKit
 
 protocol PuebaPlantillaViewUIDelegate {
     func submitForm(firstName: String, lastName: String, middleName: String, email: String, phone: String)
+    func goToViewTable()
 }
 
 class PuebaPlantillaViewUI: UIView, UITextFieldDelegate{
@@ -80,12 +81,13 @@ class PuebaPlantillaViewUI: UIView, UITextFieldDelegate{
     }()
     
     lazy var savedData: UIButton = {
-        var configuration = UIButton.Configuration.bordered()
-        configuration.title = "Registros de Informacion"
-        let button = UIButton(type: .system, primaryAction: UIAction(handler: { _ in self.startNavigation()}))
-        button.configuration = configuration
-        button.translatesAutoresizingMaskIntoConstraints = false
-        return button
+        let savedDate = UIButton()
+        savedDate.setTitle("Registro de Datos", for: .normal)
+        savedDate.backgroundColor = .systemBlue
+        savedDate.layer.cornerRadius = 5
+        savedDate.addTarget(self, action: #selector(goToViewTable), for: .touchUpInside)
+        savedDate.translatesAutoresizingMaskIntoConstraints = false
+        return savedDate
         
         
         
@@ -129,7 +131,10 @@ class PuebaPlantillaViewUI: UIView, UITextFieldDelegate{
     @objc func DismissKeyboard(){
         self.endEditing(true)
     }
-
+    @objc func goToViewTable(){
+        delegate?.goToViewTable()
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
@@ -176,13 +181,11 @@ class PuebaPlantillaViewUI: UIView, UITextFieldDelegate{
         ])
     }
     
-    func startNavigation(){
-        print("tapped!")
-    }
-    
     @objc func dissmisKeyboard(_ sender: UITapGestureRecognizer){
         self.endEditing(true)
     }
+    
+    
 
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
     

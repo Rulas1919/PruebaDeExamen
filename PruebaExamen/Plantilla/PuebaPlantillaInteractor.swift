@@ -17,15 +17,21 @@ class PuebaPlantillaInteractor{
 extension PuebaPlantillaInteractor: PuebaPlantillaInteractorProtocol {
     func saveDataUser(firstName: String, lastName: String, middleName: String, email: String, phone: String) {
         let defaults = UserDefaults.standard
-        if let data = defaults.value(forKey: "form") {
-            var form: [datos] = []
+        if let dataValue: [datos] = defaults.value(forKey: "form") as? [datos] {
+            
+            var form: [datos] = dataValue
             let data: datos = datos(firstName:  firstName,
                                     lastName:  lastName,
                                     middleName: middleName,
                                     email: email,
                                     phone: phone)
             form.append(data)
-            UserDefaults.standard.setValue(form, forKey: "form")
+            let encoder = JSONEncoder()
+            if let encodedData = try? encoder.encode(form) {
+                        UserDefaults.standard.set(encodedData, forKey: "form")
+                    }
+            presenter?.formSavedSuccessfully()
+            
         } else {
             var form: [datos] = []
             let data: datos = datos(firstName:  firstName,
@@ -34,15 +40,21 @@ extension PuebaPlantillaInteractor: PuebaPlantillaInteractorProtocol {
                                     email: email,
                                     phone: phone)
             form.append(data)
-            UserDefaults.standard.setValue(form, forKey: "form")
+            let encoder = JSONEncoder()
+            if let encodedData = try? encoder.encode(form) {
+                        UserDefaults.standard.set(encodedData, forKey: "form")
+                    }
+            presenter?.formSavedSuccessfully()
         }
         
-//        presenter?.formSavedSuccessfully()
+        
     }
     
 }
-
-public struct datos {
+public struct userData: Codable {
+    var datos: [datos]
+}
+public struct datos: Codable {
     var firstName: String
     var lastName: String
     var middleName: String
